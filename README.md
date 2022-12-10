@@ -19,4 +19,6 @@ So the structure is World has_many Bosses, Through: :Respawns. So while the Boss
 which means that the Respawn object belongs to both World and Boss.
 
 Cheers Walisson Santos
+
+
 Aspirant Developer
