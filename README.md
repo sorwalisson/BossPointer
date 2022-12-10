@@ -3,8 +3,8 @@
 Hello, my name is Walisson Santos and this is BossPointer, a study project that i've build from scratch while studying rails.
 BossPointer is a web application destinated to track Bosses respawn times for the MMORPG Tibia, site: tibia.com.
 
-First of all, you need to seed the DB than use the class FontApi to get data from the https://tibiadata.com/ API to futher seed the database. Through the IRB use the seedmundos / seedcreatures / seedboost.
-Create a General object. you only need one. this class is responsible for displaying the daily boosted Boss and creature and also displaying where the NPC rashid is located at the day.
+First of all, you need to seed the DB then use the class FontApi to get data from the https://tibiadata.com/ API to futher seed the database. Through the IRB use the seedmundos / seedcreatures / seedboost to finish seeding.
+Create a General object, you only need one. This class is responsible for displaying the daily boosted Boss and creature and also displaying where the NPC rashid is located at the day.
 
 to update the daily boosted creature and boosted boss use the FontApi.atualizardiario #i was coding in portuguese at first, it will be soon adressed.
 to update the rashid location just use the General.rashid_location.
