@@ -1,0 +1,2 @@
+class RespawnController < ApplicationController
+end

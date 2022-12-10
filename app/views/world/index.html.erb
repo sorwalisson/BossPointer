@@ -1,0 +1,5 @@
+<h1><%= World.model_name%> </h1>
+
+<body>
+<%= select_tag 'Worlds', options_from_collection_for_select(@worlds, :slug, :name), :include_blank => true, :onchange => "window.location.replace('/world/'+this.value);" %>
+</body>

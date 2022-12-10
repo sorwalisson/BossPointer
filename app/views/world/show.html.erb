@@ -1,0 +1,49 @@
+<h1><%= World.model_name%> </h1>
+<h1><%= @world.name %> </h1>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col">
+            <div class="d-flex flex-column vh-500 overflow-hidden">
+                <div class="row mb-3">
+                    <div class="btn-group" role="group" aria-label="Basic outlined example">
+                        <button type="button" class="btn btn-outline-primary p-2 bg-white" style="border: 1px solid #ced4da"><%=t("high")%></button>
+                        <button type="button" class="btn btn-outline-primary bg-white" style="border: 1px solid #ced4da"><%=t("low")%></button>
+                        <button type="button" class="btn btn-outline-primary bg-white" style="border: 1px solid #ced4da"><%=t("nochance")%></button>
+                    </div>
+                </div>
+                <div row="mb-3">
+                    <div class="row overflow-hidden">
+                            <div class="col 4 list-group h-100 list-group-flush rounded-0 overflow-hidden">
+                                <div class="h-100 scrollable overflow">
+                                    <% @world.respawns.where(chance: 2).each do |resp| %>
+                                        <div class= "container">
+                                            <p><%= image_tag Boss.find_by(id: resp.boss_id).image_url %><%= Boss.find_by(id: resp.boss_id).name %> </p>
+                                        </div><br>
+                                    <%end%>
+                                </div>
+                            </div>
+                            <div class="col 4 list-group h-100 list-group-flush rounded-0">
+                                <div class="h-100 scrollable overflow">
+                                    <% @world.respawns.where(chance: 1).each do |resp| %>
+                                        <div class= "container">
+                                            <p><%= image_tag Boss.find_by(id: resp.boss_id).image_url %><%= Boss.find_by(id: resp.boss_id).name %></p>
+                                        </div><br>
+                                    <%end%>
+                                </div>
+                            </div>
+                            <div class="col 4 list-group h-50 list-group-flush rounded-0">
+                                <div class="h-100 scrollable overflow">
+                                    <% @world.respawns.where(chance: 0).each do |resp| %>
+                                        <div class= "container">
+                                            <p><%= image_tag Boss.find_by(id: resp.boss_id).image_url %><%= Boss.find_by(id: resp.boss_id).name %> </p>
+                                        <br></div>
+                                    <%end%>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

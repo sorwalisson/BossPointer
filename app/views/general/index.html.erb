@@ -1,0 +1,14 @@
+<h1> General Information </h1>
+
+<body> Boosted Creature </body>
+<p><%= General.first.boosted_creature %></p1>
+<p><%= image_tag Creature.find_by(name: General.first.boosted_creature.pluralize).image_url %></p1>
+
+<div> Boosted Boss </div>
+<p><%= General.first.boosted_boss %></p1>
+<p><%= image_tag Boostable.find_by(name: General.first.boosted_boss).image_url %></p1>
+
+<div> Rashid Location </div>
+<p><%= General.first.rashid %></p1>
+
+<%= link_to "Ver Mundos", controller: "world", action: "index" %>
